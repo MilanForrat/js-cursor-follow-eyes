@@ -1,4 +1,5 @@
 let eyeBalls = document.getElementsByClassName('eye-ball');
+let eyes = document.querySelector('.eyes');
 
 
 document.onmousemove = function (){
@@ -14,3 +15,16 @@ document.onmousemove = function (){
         eyeBalls[i].style.transform = "translate(-"+x+",-"+y+")";
     }
 }
+
+setInterval(function(){
+    setTimeout(function(){
+        eyes.style.transition = "1s";
+        // eyes.style.transform = "translate("+randomX+"%,"+randomY+"%)";
+        eyes.style.transform = "translate(-0.6%, 4%)";
+    }, 300);
+    setTimeout(function(){
+        eyes.style.transition = "1s";
+        // eyes.style.transform = "translate("+randomX+"%,"+randomY+"%)";
+        eyes.style.transform = "translate(0.6%, 8%)";
+    }, 700);
+},1000);
